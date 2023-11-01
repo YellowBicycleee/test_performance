@@ -26,7 +26,7 @@ __attribute__((destructor)) void destroy () {
   if (d_buffer != nullptr) {
     checkCudaErrors(cudaFree(d_buffer));
     d_buffer = nullptr;
-    std::out << "device buffer freed\n";
+    std::cout << "device buffer freed\n";
   }
 }
 
