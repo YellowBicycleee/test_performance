@@ -12,7 +12,7 @@
 
 
 void* d_buffer;
-void* h_buffer;
+int* h_buffer;
 
 __attribute__((constructor)) void init() {
   d_buffer = h_buffer = nullptr;
