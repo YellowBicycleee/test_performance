@@ -52,5 +52,6 @@ int main () {
   for (int i = 0; i < 5; i++) {
     allocateAndCopy (arr, vol);
   }
-
+  // if you don't use next line, just let destructor to do cudaFree, then an error will occur: checkCudaErrors() API error = 0004 "driver shutting down" from file <test_cudaFree.cu>, line 27.
+  destroy();
 };
